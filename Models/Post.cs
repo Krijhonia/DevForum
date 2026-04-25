@@ -39,4 +39,7 @@ public class Post
 
     // FIXED: ICollection ko hamesha new List se initialize karein
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
+
+    public int ViewCount { get; set; } = 0;
+    public int Upvotes { get; set; } = 0;
 } 

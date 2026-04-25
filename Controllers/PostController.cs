@@ -21,15 +21,38 @@ namespace BlogPost.Controllers
         }
         // GET: PostController
         [HttpGet]
-        public IActionResult Index(int? categoryId)
+        public IActionResult Index(int? categoryId, string? searchString, int page = 1)
         {
+            int pageSize = 5; // 5 threads per page
             var postQuery = _context.Posts.Include(p=>p.Category).AsQueryable();
             if(categoryId.HasValue)
             {
                 postQuery = postQuery.Where(p => p.CategoryId == categoryId.Value);
+                ViewBag.CurrentCategory = categoryId;
             }
-            var posts = postQuery.ToList();
+            if(!string.IsNullOrEmpty(searchString))
+            {
+                postQuery = postQuery.Where(p => p.Title.Contains(searchString) || p.Content.Contains(searchString));
+                ViewBag.CurrentSearch = searchString;
+            }
+
+            int totalPosts = postQuery.Count();
+            int totalPages = (int)Math.Ceiling(totalPosts / (double)pageSize);
+            
+            // Validate page bounds
+            if (page < 1) page = 1;
+            if (page > totalPages && totalPages > 0) page = totalPages;
+
+            var posts = postQuery
+                .OrderByDescending(p => p.PublishedDate)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToList();
+
             ViewBag.Categories = _context.Categories.ToList();
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = totalPages;
+
             return View(posts);
         }
         [HttpGet]
