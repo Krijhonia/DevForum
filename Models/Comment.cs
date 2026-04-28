@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic; // <--- List ke liye zaroori hai
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace BlogPost.Models;
+namespace DevForum.Models;
 
 public class Comment
 {

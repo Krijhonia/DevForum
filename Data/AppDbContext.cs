@@ -2,9 +2,9 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
-using BlogPost.Models;
+using DevForum.Models;
 
-namespace BlogPost.Data;
+namespace DevForum.Data;
 
 public class AppDbContext : IdentityDbContext<IdentityUser>
 {
@@ -29,16 +29,6 @@ public class AppDbContext : IdentityDbContext<IdentityUser>
 
         // Configure the relationships and constraints
         modelBuilder.Entity<Post>().HasData(
-            new Post
-                {
-                    Id = 1,
-                    Title = "Tech Post 1",
-                    Content = "Content of Tech Post 1",
-                    Author = "John Doe",
-                    PublishedDate = new DateTime(2023, 1, 1), // Static date instead of DateTime.Now
-                    CategoryId = 1,
-                    FeatureImagePath = "tech_image.jpg", // Sample image path
-                },
                 new Post
                 {
                     Id = 2,

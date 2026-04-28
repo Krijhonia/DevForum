@@ -1,11 +1,11 @@
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using BlogPost.Data;
+using DevForum.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
-using BlogPost.Models;
+using DevForum.Models;
 
-namespace BlogPost.Controllers
+namespace DevForum.Controllers
 {
     [Authorize]
     public class ProfileController : Controller

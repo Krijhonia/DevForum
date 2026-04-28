@@ -1,8 +1,8 @@
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using BlogPost.Models;
+using DevForum.Models;
 
-namespace BlogPost.Controllers;
+namespace DevForum.Controllers;
 
 // HomeController: Yeh aapki website ka default controller hai.
 // Jab koi user sirf base URL (jaise www.mysite.com) par aata hai, toh yeh controller chalta hai.

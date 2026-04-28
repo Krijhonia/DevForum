@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using System.Text.RegularExpressions;
-namespace BlogPost.Models.Helpers;
+namespace DevForum.Models.Helpers;
 
 public class RemoveHtmlTagHelper
 {

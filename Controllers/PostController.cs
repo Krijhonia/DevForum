@@ -1,13 +1,13 @@
-using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using BlogPost.Models;
-using BlogPost.Models.ViewModels;
-using BlogPost.Data;
+using DevForum.Models;
+using DevForum.Models.ViewModels;
+using DevForum.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Net.NetworkInformation;
 
-namespace BlogPost.Controllers
+namespace DevForum.Controllers
 {
     public class PostController : Controller
     {

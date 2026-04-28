@@ -1,8 +1,8 @@
-using System;
+﻿using System;
 using System.Collections.Generic; // <--- Yeh zaroori hai
 using System.ComponentModel.DataAnnotations;
 
-namespace BlogPost.Models;
+namespace DevForum.Models;
 
 public class Category
 {

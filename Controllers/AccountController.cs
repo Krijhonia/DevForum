@@ -1,8 +1,8 @@
-using BlogPost.Models.ViewModels;
+﻿using DevForum.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
-namespace BlogPost.Controllers
+namespace DevForum.Controllers
 {
     public class AccountController : Controller
     {

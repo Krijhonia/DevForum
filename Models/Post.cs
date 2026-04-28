@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic; // <--- Is line ko add karna zaroori hai List/ICollection ke liye
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace BlogPost.Models;
+namespace DevForum.Models;
 
 public class Post
 {
